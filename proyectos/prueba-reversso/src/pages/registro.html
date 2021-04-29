@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/registro.css">
+    <title>Registro</title>
+</head>
+<body>
+    <div class="desktop">
+        <div class="logo-pink">
+            <img class="img-be" src="../img/group-be.png" alt="">
+            <p> Gestiona tus seguidores de forma segura</p>
+            <img class="img-smile" src="../img/group- smile.png" alt="">
+        </div>
+        <header class="header-inicio">
+            <button type="button" class="back" id="backRegistro"><img src="../img/back.png" alt=""></button>
+            <img class="img-logo" src="../img/group-be.png" alt="">
+        </header>
+        <div class="form-registro">
+            <p class="p-registro">Registrese en be positivite</p>
+            <form action="submit">
+                <span class="registro-span">Email/Nombre de usuario</span>
+    
+                <div class="div-registro">
+                    <input class="input-registro" type="text" name="" id="registroEmail" placeholder="Ingresa email o nombre de usuario">
+                </div>
+                <span class="registro-span">Nombre</span>
+    
+                <div class="div-registro">
+                    <input class="input-registro" type="text" name="" id="registroNombre" placeholder="Ingresa nombre">
+                </div>
+                <span class="registro-span">Contraseña</span>
+                <div class="div-registro">
+                    <input class="input-registro" type="password" name="" id="registroPass" placeholder="Ingresa contraseña">
+                    <button type="button" class="btn-eye" id="btnEye2">
+                        <img src="../img/eye-visibility-off.png" class="img-eye" id="eye2" alt="eye">
+                    </button>
+                </div>
+                <div class="div-check">
+                    <input class="registro-check" type="checkbox"  id="checkRegistro">
+                   <label for="checkRegistro"></label>
+                </div>
+                <span class="span-check">Aceptar términos y condiciones</span>
+            </form>
+            <div class="div-sesion">
+                <a class="btn-sesion" href="inicio.html?origen=registro">Crear una cuenta</a>
+                <button class="btn-otro-sesion" id="btnOtraCuenta3">Iniciar Sesión con otra cuenta</button>            
+                <div class="div-otra-cuenta">
+                    <p>O inicia sesión con otra cuenta</p>
+                    <div class="div-btn-cta">
+                        <button class="btn-cta">
+                            <img src="../img/Icon-apple.png" alt="">
+                        </button>
+                        <button class="btn-cta" style="margin-left: 15px;
+                        margin-right: 15px;">
+                            <img src="../img/Icon-facenook.png" alt="">
+                        </button>
+                        <button class="btn-cta">
+                            <img src="../img/Icon-google.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="nuevo-usuario">
+                    <p class="nuevo">¿Ya eres usuario?</p>
+                    <a href="./inicio.html" class="btn-nuevo">Ingresar</a> 
+                 </div>
+            </div>
+        </div>
+        <div class="modal-cuenta" id="modal4">
+            <div class="modal-dialog2">
+             <div class="indicador-modal"></div>
+             <section class="header-modal">
+                 <button type="button" class="modal-close" id="modalClose3"><img src="../img/Icon-close.png" alt=""></button>
+                 <p>Selecciona tu cuenta</p> 
+             </section>   
+              <section class="modal-content">
+                  <button type="button" class="btn apple">
+                      <img src="../img/Icon-apple.png" alt="">
+                      <p>Continua con Apple ID</p>
+                    </button>
+                    <button type="button" class="btn facebook">
+                        <img src="../img/Icon-facenook.png" alt="">
+                        <p>Continua con Facebook</p>
+                    </button>
+                    <button type="button" class="btn google">
+                        <img src="../img/Icon-google.png" alt="">
+                        <p>Continua con Google</p>
+                    </button>
+              </section>
+              
+            </div>
+        </div>
+    
+        <div class="indicador"></div>
+    
+    </div>
+    <script src="../js/registro.js"></script>
+</body>
+</html>

@@ -1,0 +1,608 @@
+@font-face {
+    font-family: "avenir-light";
+    src: url(../Font/Avenir-Light.ttf);
+}
+@font-face {
+    font-family: "avenir-heavy";
+    src: url(../Font/Avenir-Heavy.ttf);
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+@media screen and (min-width : 320px) and (max-width : 768px){
+    body{
+        margin: 0;
+        background: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo-pink{
+        display: none;
+    }
+    .back{
+        position: absolute;
+        margin-top: 23px;
+        z-index: 500;
+        appearance: none;
+        background: transparent;
+        border: 0;
+    }
+    .img-logo{
+        position: relative;
+        top: 37px;
+    }
+    .desktop{
+        position: absolute;
+        margin-top: 130px;
+    }
+    .form-inicio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+        position: fixed;    
+    }
+    .p-bienvenida1{
+        display: none;
+    }
+    .div-otra-cuenta{
+        display: none;
+    }
+    .div-otra-cuenta p{
+        display: none;
+    }
+    .p-inicio{
+        font-family: "avenir-heavy";
+        font-weight: 850;
+        font-size: 16px;
+        line-height: 24px;
+        color: #EC552F;
+        align-self: end;
+        margin-top: 45px;
+    }
+    .p-inicio2{
+        display: none;
+    }
+    .div-inicio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        width: 327px;
+        height: 48px;
+        border: 0.7px solid #C7CAD9;
+        box-sizing: border-box;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    
+    .inicio-span{
+        font-family: "avenir-heavy";
+        font-size: 14px;
+        line-height: 20px;
+        color: #215E99;
+        margin-bottom: 5px;
+    }
+    .input-inicio{
+        font-family: "avenir-light";
+        font-size: 14px;
+        line-height: 20px;
+        outline: none;
+        border: 0;
+        background: transparent;
+        width: 300px;
+        height: 48px;
+        margin-left: 16px;
+    }
+    .btn-eye{
+        width: 41px;
+        appearance: none;
+        background: transparent;
+        border: 0;
+        position: absolute;
+        align-self: flex-end;
+        margin: 5px;
+        margin-top: 10px;
+    }
+    .img-eye{
+        width: 25px
+    }
+    .olvidaste{
+        font-family: "avenir-heavy";
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        align-self: flex-end;
+        top: -10px;
+        position: relative;
+        color: #215E99;
+        right: -153px;    
+    }
+    .div-sesion{
+        position: relative;
+        top: -8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+     
+    .btn-sesion{
+        font-family: "avenir-heavy";
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #FFFFFF;
+        width: 327px;
+        height: 52px;
+        background: #EC552F;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        border-style: none;
+    }
+
+    .btn-otro-inicio{
+        appearance: none;
+        outline: none;
+        font-family: "avenir-heavy";
+        font-size: 14px;
+        line-height: 20px;
+        color: #215E99;
+        width: 327px;
+        height: 52px;
+        background: transparent;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.7px solid #215E99;
+        margin-top: 15px;   
+    }
+
+    .nuevo-usuario{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 9px;
+    }
+
+    .nuevo{
+        font-family: "avenir-heavy";
+        font-size: 14px;
+        line-height: 20px;
+        color: #215E99;   
+    }
+
+    .btn-nuevo{
+        font-family: "avenir-heavy";
+        font-size: 14px;
+        line-height: 20px;
+        color: #EC552F;
+        margin-left: 5px;   
+    }
+
+    .indicador{
+        position: fixed;
+        width: 134px;
+        height: 5px;
+        left: calc(50% - 134px/2 + 0.5px);
+        top: 98%;
+        background: #215E99;
+        border-radius: 100px;
+    }
+    .modal { 
+        position: fixed;
+        width: 100%;
+        height: 93px;
+        top: calc(87% - 5px/2 + 5.5px);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #4CA484;
+        color: #FFFFFF;
+        font-family: "avenir-light";
+        font-size: 16px;
+        line-height: 24px;
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.35s ease-in;
+        border-radius: 20px 20px 0px 0px;
+        z-index: 1;    
+    }
+
+    .modal.is-visible {
+        visibility: visible;
+        opacity: 1;
+    }
+    .modal-dialog {
+        position: relative;
+        max-width: 204px;
+        border-radius: 5px;
+        overflow: auto;
+        cursor: default;
+        text-align: center;
+    }
+    .modal-cuenta{ 
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        font-family: "avenir-heavy";
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.35s ease-in;
+        z-index: 1;
+        background: rgba(0,0,0, 0.5);
+    }
+    
+    .modal-cuenta.is-visible {
+        visibility: visible;
+        opacity: 1;
+    }
+    .modal-dialog2 {
+        position: relative;
+        overflow: auto;
+        cursor: default;
+        text-align: center;
+        background: #ffff;
+        border-radius: 22px 22px 0px 0px;
+        top: calc(54% - 5px/2 + 5.5px);        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .indicador-modal{
+        width: 62px;
+        height: 4px;
+        background: #C8C8C8;
+        border-radius: 2px;
+        top: 10px;
+        position: relative;
+        
+    }
+    .header-modal{
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+
+    }
+    .header-modal a{
+        position: relative;
+        right: 50px;
+        top: 3px;
+    }
+    .header-modal p{
+        color: #215E99;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+    }
+    .btn {
+        appearance: none;
+        outline: none;
+        background: transparent;
+        border: 0.7px solid #C7CAD9;
+        box-sizing: border-box;
+        border-radius: 4px;
+        width: 327px;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 21px;
+    }
+    .btn p{
+        font-family: "avenir-heavy";
+        font-size: 14px;
+        line-height: 20px;
+        color: #215E99;
+    }
+    .modal-close{
+        appearance: none;
+        outline: none;
+        background: transparent;
+        border: 0;
+        right: 48px;
+        position: relative;
+    }
+}
+
+
+@media screen and (min-width : 769px){
+    body{
+        margin: 0;
+        background: #FBEFEC;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-inicio{
+        display: none;
+    }
+    .desktop{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .logo-pink{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 40px;
+        padding-top: 50px;
+    }
+    .logo-pink p{
+        display: block;
+        font-family: "avenir-heavy";
+        font-size: 30px;
+        line-height: 120%;
+        letter-spacing: 0.005em;
+        color: #215E99;
+        margin: 9%;
+        position: relative;
+        right: 35px;
+    }
+    .img-be{
+        width: 208px;
+    }
+   .img-smile{
+        align-self: center;
+        margin-left: 17px;
+        top: 238px;
+        position: absolute;
+   }
+   .form-inicio{
+        height: 100%;
+        background: #ffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        right: 0;
+        position: fixed;
+        width: 50%;
+   }
+   .p-bienvenida1{
+        font-family: "avenir-heavy";
+        font-size: 24px;
+        line-height: 32px;
+        color: #EC552F; 
+        align-self: flex-start;
+        margin-top: 67px;
+    }
+   .p-inicio{
+       display: none;
+   }
+   .p-inicio2{
+        font-family: "avenir-light";
+        font-size: 16px;
+        line-height: 24px;
+        color: #EC552F; 
+        align-self: flex-start;
+        margin-top: 15px;
+        margin-bottom: 44px;
+   }
+   .btn-inicio{
+        font-family: "avenir-heavy";
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #FFFFFF;
+        width: 327px;
+        height: 52px;
+        background: #215E99;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+    }
+    .btn-otro-inicio{
+        display: none; 
+    }
+    .nuevo-usuario{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: calc(20% - 5px/2 + 5.5px);
+    }
+   .nuevo{
+        font-family: "avenir-heavy";
+        font-size: 14px;
+        line-height: 20px;
+        color: #215E99;   
+    }
+    .btn-nuevo{
+        font-family: "avenir-heavy";
+        font-size: 14px;
+        line-height: 20px;
+        color: #EC552F;
+        margin-left: 5px;   
+    }
+
+    .div-otra-cuenta{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 32px;
+    }
+    .div-otra-cuenta p{
+        font-family: "avenir-heavy";
+        font-size: 14px;
+        line-height: 20px;
+        color: #EC552F;
+        margin-bottom: 40px;
+    }
+    .btn-cta{
+        outline: 0;
+        border: 0;
+        border-radius: 50px;
+        width: 49px;
+        height: 48px;
+    }
+    .div-inicio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        width: 327px;
+        height: 48px;
+        border: 0.7px solid #C7CAD9;
+        box-sizing: border-box;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    
+    .inicio-span{
+        font-family: "avenir-heavy";
+        font-size: 14px;
+        line-height: 20px;
+        color: #215E99;
+        margin-bottom: 5px;
+    }
+    .input-inicio{
+        font-family: "avenir-light";
+        font-size: 14px;
+        line-height: 20px;
+        outline: none;
+        border: 0;
+        background: transparent;
+        width: 300px;
+        height: 48px;
+        margin-left: 16px;
+    }
+    .olvidaste{
+        font-family: "avenir-heavy";
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        align-self: flex-end;
+        top: -10px;
+        position: relative;
+        color: #215E99;
+        right: -153px;
+    }
+    .div-sesion{
+        position: relative;
+        top: 9px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-sesion{
+        font-family: "avenir-heavy";
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #FFFFFF;
+        width: 327px;
+        height: 52px;
+        background: #215E99;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        border-style: none;
+    }
+    .btn-otro-inicio{
+        display: none;
+    }
+    .modal { 
+        position: fixed;
+        height: 40px;
+        top: calc(-1% - 5px/2 + 5.5px);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #4CA484;
+        color: #FFFFFF;
+        font-family: "avenir-light";
+        font-size: 16px;
+        line-height: 24px;
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.35s ease-in;
+        z-index: 1;
+    }
+
+    .modal.is-visible {
+        visibility: visible;
+        opacity: 1;
+    }
+    .modal-dialog {
+        position: relative;
+        overflow: auto;
+        cursor: default;
+        text-align: center;
+    }
+    .modal-cuenta{ 
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        font-family: "avenir-heavy";
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.35s ease-in;
+        z-index: 1;
+        background: rgba(0,0,0, 0.5);
+    }
+    
+    .modal-cuenta.is-visible {
+        visibility: visible;
+        opacity: 1;
+    }
+    .modal-dialog2 {
+        position: relative;
+        overflow: auto;
+        cursor: default;
+        text-align: center;
+        background: #ffff;
+        border-radius: 22px 22px 0px 0px;
+        top: calc(58% - 5px/2 + 5.5px);        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .btn-eye{
+        width: 41px;
+        appearance: none;
+        background: transparent;
+        border: 0;
+        position: absolute;
+        align-self: flex-end;
+        z-index: 2000;
+        margin: 5px;
+        margin-top: 10px;
+    }
+    .img-eye{
+        width: 25px
+    }
+}   
