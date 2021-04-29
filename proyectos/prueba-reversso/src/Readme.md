@@ -9,6 +9,8 @@ para movil como desktop, así como un cambio en el tipo de input para contraseñ
 el cual cambia si el usuario da click a la imagen del ojo para ocultar o mostrar
 la contraseña ingresada.
 
+
+
 Adjunto imagenes de vista en mi pc:
 
 ### Desktop
